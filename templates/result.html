@@ -1,0 +1,71 @@
+{% extends "bootstrap/base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block title %} Demo App {% endblock %} {%
+block styles %} {{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='starter-template.css')}}"> {% endblock %} {% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Consulta SEMOB</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('login') }}">Entrar</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('signup') }}">Registrar</a>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron">
+        {% if info is none %}
+        <h3 class="page-header">Veículo não encontrado ou dado inexistente</h3>
+        {% else %}
+        <h3 class="page-header">Dados sobre o veículo pesquisado</h3>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Placa</th>
+                        <th>Data de Apreensão</th>
+                        <th>Motivo da Apreensão</th>
+                        <th>Situação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{info.brand}}</td>
+                        <td>{{info.model}}</td>
+                        <td>{{info.plate}}</td>
+                        <td>{{info.date}}</td>
+                        <td>{{info.reason}}</td>
+                        {% if info.situation|int != 0 %}
+                        <td>Pátio</td>
+                        {% else %}
+                        <td>Baixa</td>
+                        {% endif %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</div>
+<!-- /.container -->
+{% endblock %}
