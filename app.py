@@ -13,6 +13,7 @@ import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '123!'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:656993@localhost/flask'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
 login_manager = LoginManager()
@@ -94,7 +95,7 @@ def login():
                 login_user(user, remember=form.remember.data)
                 return redirect(url_for('dashboard'))
 
-        message = 'Dados inválidos'
+        message = 'Dados invalidos'
         return render_template('login.html', form=form, message=message)
 
     return render_template('login.html', form=form, message=message)
