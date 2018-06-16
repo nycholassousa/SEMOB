@@ -30,7 +30,7 @@ Após ter instalado as requisições necessárias, entre no diretório principal
     python app.py
 ```
 
-A aplicação irá rodar localmente, na porta 5000 (127.0.0.1:5000)
+A aplicação irá rodar localmente, na porta 5000 (http://127.0.0.1:5000)
 
 ## Informações Adicionais
 
