@@ -12,7 +12,8 @@ import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '123!'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:656993@localhost/flask'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:656993@localhost/flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://xfknaorlqkasws:b13173df128716a8e79e9b54fb2aa782a3f01703819eee70416b515e368ac562@ec2-54-243-235-153.compute-1.amazonaws.com:5432/dbmdf4dpinbe69'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
