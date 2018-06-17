@@ -10,7 +10,6 @@ itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
 pipenv==2018.5.18
-pkg-resources==0.0.0
 psycopg2==2.7.4
 python-dotenv==0.8.2
 SQLAlchemy==1.2.8
