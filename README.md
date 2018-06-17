@@ -37,5 +37,9 @@ A aplicação irá rodar localmente, na porta 5000 (http://127.0.0.1:5000)
 ## Informações Adicionais
 
 A aplicação está rodando no heroku no seguinte link: https://semob.herokuapp.com/
+
 Você pode criar sua conta normalmente.
+
 Para acessar a conta de administrador, use as seguintes credenciais: 
+- Email: admin@email.com
+- Senha: administrador
