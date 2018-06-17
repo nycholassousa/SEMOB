@@ -16,6 +16,8 @@ Implicando que você esteja no diretório principal da aplicação, apenas insta
     pip install -r requirements
 ```
 
+Para a realização do próximo passo, você precisa alterar a linha 16 do arquivo app.py, inserindo seu banco de dados do postgre.
+
 Após isso, execute os seguintes comandos:
 ```sh
     python
@@ -34,4 +36,6 @@ A aplicação irá rodar localmente, na porta 5000 (http://127.0.0.1:5000)
 
 ## Informações Adicionais
 
-TODO
+A aplicação está rodando no heroku no seguinte link: https://semob.herokuapp.com/
+Você pode criar sua conta normalmente.
+Para acessar a conta de administrador, use as seguintes credenciais: 
