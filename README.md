@@ -13,7 +13,7 @@ A aplicação tem como foco uma consulta de veículos no Pátio da SEMOB.  O obj
 
 Implicando que você esteja no diretório principal da aplicação, apenas instale os requirimentos do pip
 ```sh
-    pip install -r requirements
+    pip install -r requirements.txt
 ```
 
 Para a realização do próximo passo, você precisa alterar a linha 16 do arquivo app.py, inserindo seu banco de dados do postgre.

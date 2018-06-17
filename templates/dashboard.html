@@ -14,6 +14,13 @@
       <h1 class="page-header">Bem-vindo, {{ current_user.name }}</h1>
 
       {% if current_user.admin|int != 0 %}
+
+      <div class="btn-group">
+          <a href="/registerVehicle" class="btn btn-primary active">
+              <i class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i> Adicionar Veículo
+          </a>
+      </div>
+
       <h2 class="sub-header">Veículos na database</h2>
       <div class="table-responsive">
         <table class="table table-striped">
